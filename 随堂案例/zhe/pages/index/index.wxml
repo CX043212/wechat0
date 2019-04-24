@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="banner">
+  <swiper autoplay loop>
+    <swiper-item wx:for="{{banner}}" wx:key="*this">
+      <image src="{{item}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class='goodsList'>
+  <view class='goodsItem' wx:for="{{goods}}">
+    <image src="{{item.goods_pic}}"></image>
+  </view>
+</view>

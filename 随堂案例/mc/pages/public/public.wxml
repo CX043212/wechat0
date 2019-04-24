@@ -1,0 +1,36 @@
+<!--logs.wxml-->
+<view class='container' wx:if="{{flag}}">
+  <view class="address row">
+    <text>我的地址</text>
+    <view bindtap='getAddress'>{{address}}</view>
+  </view>
+  <view class="type row">
+    <text>类型</text>
+    <radio-group  bindchange="radioChange">
+      <label>
+        转让
+        <radio value="sell" checked="{{type == 'sell'}}" />
+      </label>
+      <label>
+      求购
+        <radio value="buy" checked='{{type == "buy"}}' />
+      </label>
+    </radio-group>
+  </view>
+  <view class="info row">
+    <text>说明</text>
+    <input type="text" value='{{info}}' placeholder='填写您的具体需求' bindinput='handleChangeInfo'/>
+  </view>
+  <view class="tel row">
+    <text>联系方式</text>
+    <input value="{{tel}}" placeholder='填写您的联系方式' bindinput='handleChangeTel'/>
+  </view>
+  <button class='public' bindtap='handlePublic'>发布</button>
+</view>
+
+
+<view class='success' wx:else>
+  <icon type="success" size="80"></icon>
+  <text>添加成功</text>
+  <button bindtap='handleTo'>返回首页</button>
+</view>

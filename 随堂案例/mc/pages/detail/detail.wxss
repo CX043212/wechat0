@@ -1,0 +1,22 @@
+/* pages/detail/detail.wxss */
+.row{
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  padding: 0 18rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f3f3f3; 
+  font-size: 30rpx;
+  color: #ccc;
+}
+
+.row>text{
+  width: 200rpx;
+}
+.public{
+  width: 90%;
+  margin-top:50rpx;
+  background: #ff9700;
+  border:0;
+  color: #fff;
+}

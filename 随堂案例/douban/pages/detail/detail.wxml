@@ -1,0 +1,4 @@
+<!--pages/detail/detail.wxml-->
+<view>
+{{movie_info.desc}}
+</view>

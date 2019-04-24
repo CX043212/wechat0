@@ -1,0 +1,19 @@
+<view class='container' >
+  <view class="address row">
+    <text>我的地址</text>
+    <view bindtap='getAddress'>{{dataInfo.address}}</view>
+  </view>
+  <view class="type row">
+    <text>类型</text>
+    <view>{{dataInfo.type == 'sell'?"转让":"求购"}}</view>
+  </view>
+  <view class="info row">
+    <text>说明</text>
+    <view>{{dataInfo.info}}</view>
+  </view>
+  <view class="tel row">
+    <text>联系方式</text>
+    <view>{{dataInfo.tel}}</view>
+  </view>
+  <button class='public' bindtap='handlePublic'>发布</button>
+</view>

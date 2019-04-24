@@ -1,0 +1,109 @@
+<!--index.wxml-->
+<view class="search">
+  <view>
+    <icon type='search' size='14' />
+    <text>搜索</text>
+  </view>
+</view>
+
+
+<!-- 电影 -->
+
+<view class='movie'>
+  <view class='movie_title' >
+    <text>最近上映</text>
+    <text>更多></text>
+  </view>
+  <scroll-view scroll-x>
+    <view class='movie_list'>
+      <block wx:for="{{movie_showing}}" wx:key="{{index}}">
+        <view class='movie_item' bindtap='handleTo'  data-id="{{item.id}}" data-title="{{item.title}}">
+          <image src="{{item.cover.url}}"></image>
+          <text>{{item.title}}</text>
+          <view class='rating'>
+           <block wx:for="{{5}}" wx:key="*this" wx:for-item="ratVal" wx:for-index="idx" wx:if="{{item.rating?true:false}}">
+             <text class="{{(idx+1)<=item.n?'active':''}}">☆</text>
+           </block>
+            <text class='val'>{{item.rating?item.rating.value:'暂无评分'}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+</view>
+
+<!--  -->
+<view class='movie'>
+  <view class='movie_title'>
+    <text>最近上映</text>
+    <text>更多></text>
+  </view>
+  <scroll-view scroll-x>
+    <view class='movie_list'>
+      <block wx:for="{{movie_showing}}" wx:key="{{index}}">
+        <view class='movie_item'>
+          <image src="{{item.cover.url}}"></image>
+          <text>{{item.title}}</text>
+          <view class='rating'>
+           <block wx:for="{{5}}" wx:key="*this" wx:for-item="ratVal" wx:for-index="idx" wx:if="{{item.rating?true:false}}">
+             <text class="{{(idx+1)<=item.n?'active':''}}">☆</text>
+           </block>
+            <text class='val'>{{item.rating?item.rating.value:'暂无评分'}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+</view>
+
+<!--  -->
+
+<view class='movie'>
+  <view class='movie_title'>
+    <text>最近上映</text>
+    <text>更多></text>
+  </view>
+  <scroll-view scroll-x>
+    <view class='movie_list'>
+      <block wx:for="{{movie_showing}}" wx:key="{{index}}">
+        <view class='movie_item'>
+          <image src="{{item.cover.url}}"></image>
+          <text>{{item.title}}</text>
+          <view class='rating'>
+           <block wx:for="{{5}}" wx:key="*this" wx:for-item="ratVal" wx:for-index="idx" wx:if="{{item.rating?true:false}}">
+             <text class="{{(idx+1)<=item.n?'active':''}}">☆</text>
+           </block>
+            <text class='val'>{{item.rating?item.rating.value:'暂无评分'}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+</view>
+
+<!--  -->
+<view class='movie'>
+  <view class='movie_title'>
+    <text>最近上映</text>
+    <text>更多></text>
+  </view>
+  <scroll-view scroll-x>
+    <view class='movie_list'>
+      <block wx:for="{{movie_showing}}" wx:key="{{index}}">
+        <view class='movie_item'>
+          <image src="{{item.cover.url}}"></image>
+          <text>{{item.title}}</text>
+          <view class='rating'>
+           <block wx:for="{{5}}" wx:key="*this" wx:for-item="ratVal" wx:for-index="idx" wx:if="{{item.rating?true:false}}">
+             <text class="{{(idx+1)<=item.n?'active':''}}">☆</text>
+           </block>
+            <text class='val'>{{item.rating?item.rating.value:'暂无评分'}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
